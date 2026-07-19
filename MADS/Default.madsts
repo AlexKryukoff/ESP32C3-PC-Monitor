@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-16"?>
+<MADS_SerialServerSharedProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileFormat>madsts</FileFormat>
+  <FormatVersion>1</FormatVersion>
+  <PortSpeed>Baud_9600</PortSpeed>
+  <Encoding>ASCII</Encoding>
+  <EndOfLineChar>\n</EndOfLineChar>
+  <AutoConnect>false</AutoConnect>
+  <AutoConnectRequest>MADS</AutoConnectRequest>
+  <AutoConnectResponse>Hello MADS</AutoConnectResponse>
+  <AutoConnectResponseTimeout>500</AutoConnectResponseTimeout>
+  <ConnectionInterval>1000</ConnectionInterval>
+  <SendMode>Stream</SendMode>
+  <MessageInterval>500</MessageInterval>
+  <ConnectionCheckInterval>5000</ConnectionCheckInterval>
+  <DataRequest>Send Data</DataRequest>
+  <DataFormatter>
+    <DecimalSeparator>.</DecimalSeparator>
+    <GlobalPrefix />
+    <GlobalPostfix />
+    <FormattingItems>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>CPU temperature</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>GPU temperature</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>CPU usage</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>GPU usage</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>CPU clock</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>Ping</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>Memory clock</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>RAM usage</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>Divide</operationType>
+        <operationValue>1000</operationValue>
+        <roundMode>None</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>Memory usage</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>HDD2 temperature</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>None</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>Framerate</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat>{0:0.#E+0}</outFormat>
+      </MASM_StringFormattingItem>
+      <MASM_StringFormattingItem>
+        <enable>true</enable>
+        <mode>Property</mode>
+        <value>HDD1 temperature 2</value>
+        <prefix />
+        <postfix>;</postfix>
+        <targetData>PropertyValue</targetData>
+        <operationType>None</operationType>
+        <operationValue>0</operationValue>
+        <roundMode>Round</roundMode>
+        <modulo>false</modulo>
+        <outFormat />
+      </MASM_StringFormattingItem>
+    </FormattingItems>
+  </DataFormatter>
+</MADS_SerialServerSharedProperties>
