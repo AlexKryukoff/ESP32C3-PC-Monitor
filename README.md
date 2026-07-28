@@ -91,3 +91,20 @@ MADS отправляет по Serial (9600 бод) 12 числовых знач
 ## Примечание
 
 Скетч не использует Wi-Fi — вся связь с ПК идёт по проводному USB/Serial соединению, никаких сетевых учётных данных в коде нет.
+
+## Команда для запуска MSI от администратора в автозапуск(в самом MSI необходимо убрать галочку запускать с Виндовс)
+Шаг 1. Отключить штатный автозапуск
+В Afterburner: Settings → General → снять галочку «Start with Windows». Иначе получишь два экземпляра: один от реестра без прав, второй от задачи с правами.
+Шаг 2. Создать задачу
+Быстрый вариант — открой cmd от администратора и выполни три команды:
+schtasks /create /tn "MSI Afterburner" /tr "\"C:\Program Files (x86)\MSI Afterburner\MSIAfterburner.exe\"" /sc onlogon /ru "%USERNAME%" /rl highest /f
+
+powershell -Command "$t = Get-ScheduledTask 'MSI Afterburner'; $t.Settings.ExecutionTimeLimit = 'PT0S'; $t.Settings.DisallowStartIfOnBatteries = $false; $t.Settings.StopIfGoingOnBatteries = $false; Set-ScheduledTask $t"
+
+powershell -Command "$t = Get-ScheduledTask 'MSI Afterburner'; $t.Triggers[0].Delay = 'PT30S'; Set-ScheduledTask $t"
+​
+Что делает каждая:
+Создаёт задачу с запуском при входе в систему и наивысшими правами.
+Убирает лимит времени выполнения. Это важно: по умолчанию schtasks ставит 72 часа, и Afterburner был бы убит после трёх суток аптайма. Плюс снимает ограничения по питанию от батареи.
+Добавляет задержку 30 секунд после входа — чтобы успели подняться драйверы GPU и сеть. Без задержки Afterburner иногда стартует раньше, чем видеодрайвер готов.
+
